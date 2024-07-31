@@ -17,7 +17,7 @@ public class StudentContoller {
 
     @GetMapping("/check")
     public String check() {
-        return  "Hi Students";
+        return  "Hi Students 1";
     }
 
     @PostMapping("/students")
