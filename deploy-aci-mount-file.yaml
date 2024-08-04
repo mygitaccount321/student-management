@@ -1,0 +1,39 @@
+apiVersion: '2019-12-01'
+location: eastus
+name: file-share-demo4
+properties:
+  imageRegistryCredentials:
+    - server: az204learn.azurecr.io
+      username: az204learn
+      password: 123
+  containers:
+    - name: hellofiles
+      properties:
+        environmentVariables: []
+        image: az204learn.azurecr.io/helloacrtasks:v10
+        ports:
+          - port: 80
+          - port: 8080
+        resources:
+          requests:
+            cpu: 1.0
+            memoryInGB: 1.5
+        volumeMounts:
+          - mountPath: /app/logs/
+            name: filesharevolume
+  osType: Linux
+  restartPolicy: Always
+  ipAddress:
+    type: Public
+    ports:
+      - port: 80
+      - protocol: tcp
+        port: 8080
+  volumes:
+    - name: filesharevolume
+      azureFile:
+        sharename: acishare
+        storageAccountName: az204learnstorage
+        storageAccountKey: 123
+tags: {}
+type: Microsoft.ContainerInstance/containerGroups
