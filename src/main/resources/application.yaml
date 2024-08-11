@@ -9,3 +9,5 @@ logging:
   file:
     name: logs/mounted.txt
 
+myconfig:
+  application-name: ${APPLICATION-NAME:test-app}

@@ -1,5 +1,6 @@
 package com.mytry.student_management.contoller;
 
+import com.mytry.student_management.models.MyAppConfig;
 import com.mytry.student_management.models.Student;
 import com.mytry.student_management.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
@@ -16,11 +17,13 @@ public class StudentContoller {
     @Autowired
     private StudentService studentService;
 
+    @Autowired
+    private MyAppConfig myAppConfig;
 
     @GetMapping("/check")
     public String check() {
         log.info("Check is calling");
-        return  "Hi Students 11234";
+        return  "Hi Students 11234 "+myAppConfig.applicationName();
     }
 
     @PostMapping("/students")
