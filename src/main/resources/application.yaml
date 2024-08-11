@@ -10,4 +10,4 @@ logging:
     name: logs/mounted.txt
 
 myconfig:
-  application-name: ${APPLICATION-NAME:test-app}
+  application-name: ${APPLICATION_NAME:test-app}
