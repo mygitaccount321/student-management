@@ -26,6 +26,10 @@ public class StudentContoller {
         return  "Hi Students 11234 "+myAppConfig.applicationName();
     }
 
+    @GetMapping("/check1")
+    public String check1() {
+        return  "Hi Students check1 "+myAppConfig.applicationName();
+    }
     @PostMapping("/students")
     public Student saveStudent(@RequestBody Student student) {
         return studentService.saveStudent(student);
