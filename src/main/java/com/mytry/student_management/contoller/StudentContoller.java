@@ -23,7 +23,7 @@ public class StudentContoller {
     @GetMapping("/check")
     public String check() {
         log.info("Check is calling");
-        return  "Hi Students 543 "+myAppConfig.applicationName();
+        return  "Hi Students 5434 "+myAppConfig.applicationName();
     }
 
     @GetMapping("/check1")
