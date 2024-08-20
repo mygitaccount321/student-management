@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'az204learn'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DEC88A13DD87417CAB5D7F27E18CA501 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3CB422E940E94E5FB4357DB9B9C05D11 }}
           package: '*.jar'
